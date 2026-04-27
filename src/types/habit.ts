@@ -5,7 +5,7 @@ export type Habit = {
   description: string;
   frequency: "daily";
   createdAt: string;
-  completions: string;
+  completions: string[];
 };
 
 export type HabitTrackerSessions = Habit[];
