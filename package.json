@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "test:unit": "vitest run --coverage",
-    "text:integration": "playwright test",
-    "test": "pnpm run test:unit && pnpm run test:integration && pnpm run test:e2e"
+    "text:integration": "vitest run",
+    "test:e2e": "playwright test",
+    "test": "npm run test:unit && npm run test:integration && npm run test:e2e"
   },
   "dependencies": {
     "next": "16.2.4",
