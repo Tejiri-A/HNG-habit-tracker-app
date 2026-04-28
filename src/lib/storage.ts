@@ -1,11 +1,7 @@
 import { Habit } from "@/types/habit";
 import { User, Session } from "@/types/auth";
+import { KEYS } from "./constants";
 
-const KEYS = {
-  USERS: "habit-tracker-users",
-  SESSION: "habit-tracker-session",
-  HABITS: "habit-tracker-habits",
-};
 
 // Safely get data from local storage
 const get = <T>(key: string, defaultValue: T): T => {
