@@ -1,7 +1,7 @@
 import React from "react";
 
 type SplashScreenProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 function SplashScreen({ children }: SplashScreenProps) {
@@ -18,7 +18,7 @@ function SplashScreen({ children }: SplashScreenProps) {
         <span className="text-4xl brand">
           Habit<span className="brand-accent">Tracker</span>
         </span>
-        <p className="spash-tagline">Build habits that stick</p>
+        <p className="splash-tagline">Build habits that stick</p>
       </div>
 
       {/* Spinner */}

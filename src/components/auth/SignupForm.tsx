@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Storage } from "@/lib/storage";
-import type { User, Session } from "@/types/auth";
 import { signUp, useAuth } from "@/lib/auth";
 
 interface FormFields {
@@ -57,7 +55,7 @@ export default function SignupForm() {
     }
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     // Client-side validation
@@ -135,7 +133,7 @@ export default function SignupForm() {
 
       {/* Password */}
       <div className="form-group">
-        <label htmlFor="signup-password" className="field-label">
+        <label htmlFor="signup-password" className="form-label">
           Password
         </label>
         <input

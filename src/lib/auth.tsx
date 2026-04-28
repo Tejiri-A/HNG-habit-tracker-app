@@ -13,7 +13,6 @@ import { Storage } from "@/lib/storage";
 import type { User, Session } from "@/types/auth";
 
 
-
 export function signUp(
   email: string,
   password: string,

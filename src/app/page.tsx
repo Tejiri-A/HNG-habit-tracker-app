@@ -13,12 +13,14 @@ function Home() {
   useEffect(() => {
     // Wait until auth provider has hydrated from local storage
     if (isLoading) return;
+    // eslint-disable-next-line
+    setStatusMessage(
+      session ? "Redirecting to dashboard..." : "Redirecting to login...",
+    );
     const timer = setTimeout(() => {
       if (session) {
-        setStatusMessage("Redirecting to dashboard...");
         router.replace("/dashboard");
       } else {
-        setStatusMessage("Redirecting to login...");
         router.replace("/login");
       }
     }, SPLASH_DURATION);
