@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { logIn } from "@/lib/auth";
-import { useAuth } from "@/lib/auth";
+import { logIn, useAuth } from "@/lib/auth";
+
 
 interface FormFields {
   email: string;
