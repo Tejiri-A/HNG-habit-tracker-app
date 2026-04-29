@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth";
+import PWARegistration from "@/components/PWARegistration";
 
 const jakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -32,9 +33,12 @@ export default function RootLayout({
       lang="en"
       className={`${jakartaSans.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="flex flex-col min-h-full">
-        <AuthProvider>{children}</AuthProvider>
-      </body>
+      <>
+        <PWARegistration />
+        <body className="flex flex-col min-h-full">
+          <AuthProvider>{children}</AuthProvider>
+        </body>
+      </>
     </html>
   );
 }
